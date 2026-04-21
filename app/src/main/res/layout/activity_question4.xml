@@ -4,6 +4,70 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!-- Gradient Background -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ic_launcher_background"
+        >
 
+    </LinearLayout>
 
+    <!-- Grass Card -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:background="@android:color/holo_blue_dark"
+        android:elevation="10dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="We have more than 10 fingers"
+        android:textSize="29dp"
+        android:textStyle="bold"
+        android:layout_marginBottom="35dp"
+        android:textColor="@color/black" />
+
+    <Button
+        android:id="@+id/btnMyth2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Myth"
+        android:textStyle="bold"
+        android:layout_marginBottom="15dp"
+        android:backgroundTint="@android:color/holo_purple" />
+
+    <Button
+        android:id="@+id/btnHack2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hack"
+        android:textStyle="bold"
+        android:layout_marginBottom="25dp"
+        android:backgroundTint="@android:color/holo_purple" />
+
+    <EditText
+        android:id="@+id/txtResponse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:text="Response" />
+
+    <Button
+        android:id="@+id/btnNext2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:textStyle="bold"
+        android:backgroundTint="#5C6" />
+
+    </LinearLayout>
 </FrameLayout>
