@@ -28,7 +28,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="We have more than 10 fingers"
+        android:text="India is the most successful cricketing nation in history"
         android:textSize="29dp"
         android:textStyle="bold"
         android:layout_marginBottom="35dp"

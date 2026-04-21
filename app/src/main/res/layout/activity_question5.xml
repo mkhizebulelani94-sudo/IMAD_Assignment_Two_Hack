@@ -28,7 +28,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="We have more than 10 fingers"
+        android:text="The Proteas won the World Test Championship in 2025"
         android:textSize="29dp"
         android:textStyle="bold"
         android:layout_marginBottom="35dp"
@@ -41,7 +41,7 @@
         android:text="Myth"
         android:textStyle="bold"
         android:layout_marginBottom="15dp"
-        android:backgroundTint="@android:color/holo_blue_dark" />
+        android:backgroundTint="@android:color/holo_purple" />
 
     <Button
         android:id="@+id/btnHack2"

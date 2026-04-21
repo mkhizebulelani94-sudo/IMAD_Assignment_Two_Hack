@@ -28,7 +28,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="We have more than 10 fingers"
+        android:text="Ab de Villiars has a T20 hundred"
         android:textSize="29dp"
         android:textStyle="bold"
         android:layout_marginBottom="35dp"
