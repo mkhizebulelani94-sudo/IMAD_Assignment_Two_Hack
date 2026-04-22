@@ -2,6 +2,8 @@ package com.example.imad_assignment_two
 
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -48,16 +50,45 @@ class MainActivity : ComponentActivity() {
             showQuestionScreen()
         }
     }
-}
-    private fun showQuestionScreen(){
+
+    private fun showQuestionScreen() {
         setContentView(R.layout.activity_question1)
-    //Main declarations for the questions page
+        //Main declarations for the questions page
 
         val questionText = findViewById<TextView>(R.id.questionText)
-        val trueButton = findViewById<Button>(R.id.trueButton)
-        val falseButton = findViewById<Button>(R.id.falseButton)
-        val feedbackText = findViewById<TextView>(R.id.feedbackText)
-        val nextButton = findViewById<Button>(R.id.nextButton)
+        val trueButton = findViewById<Button>(R.id.btnHack)
+        val falseButton = findViewById<Button>(R.id.btnMyth)
+        val feedbackText = findViewById<EditText>(R.id.txtRespond)
+        val nextButton = findViewById<Button>(R.id.btnNext1)
+
+        questionText.text = questions[currentQuestion]
+        feedbackText.text = ""
+        var answered = false
+
+        trueButton.setOnClickListener {
+            if (!answered) {
+                checkAnswer(true, feedbackText)
+                answered = true
+            }
+        }
+
+        falseButton.setOnClickListener {
+            if (!answered) {
+                checkAnswer(false, feedbackText)
+                answered = false
+            }
+        }
+
+        nextButton.setOnClickListener {
+            currentQuestion++
+            if (currentQuestion < questions.size) {
+                showQuestionScreen()
+            } else {
+                ShowScoreScreen()
+            }
+        }
+    }
+
 
 
 

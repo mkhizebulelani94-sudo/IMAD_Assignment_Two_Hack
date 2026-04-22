@@ -26,6 +26,7 @@
         android:elevation="10dp">
 
     <TextView
+        android:id="@+id/questionText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="T20 cricket is the most popular format in the world"
