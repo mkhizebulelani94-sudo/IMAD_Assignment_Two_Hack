@@ -46,6 +46,17 @@
             android:textColor="#EEEEEE"
             android:layout_marginBottom="20dp" />
 
+        <!-- Subtitle -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Please note: Hack = True and Myth = False"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="sans-serif-condensed"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textColor="@color/white" />
+
 
         <!-- Button -->
         <Button
