@@ -89,6 +89,20 @@ class MainActivity : ComponentActivity() {
         }
     }
 
+    private fun checkAnswer(userAnswer: Boolean, feedbackText: TextView) {
+        val correct = answers[currentQuestion]
+        if (userAnswer == correct) {
+            feedbackText.text = "You are CORRECT!"
+            score++
+            feedbackList.add("g${currentQuestion + 1}: ")
+        } else {
+            feedbackText.text = "WRONG!"
+            feedbacklist.add("g${currentQuestion + 1}: ")
+        }
+    }
+
+
+
 
 
 
