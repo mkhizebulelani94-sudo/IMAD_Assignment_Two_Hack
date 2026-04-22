@@ -24,35 +24,35 @@
         android:padding="24dp"
         android:background="@android:color/holo_blue_dark"
         android:elevation="10dp">
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Thanks for taking part!"
+            android:text="Thanks for participating!"
             android:textSize="29dp"
             android:textStyle="bold"
             android:layout_marginBottom="35dp"
             android:textColor="@color/black" />
 
         <Button
-            android:id="@+id/btnMyth2"
+            android:id="@+id/scoreCheck"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Myth"
+            android:layout_marginBottom="20dp"
+            android:text="Check Score"
             android:textStyle="bold"
-            android:layout_marginBottom="15dp"
-            android:backgroundTint="@android:color/holo_purple" />
-
-        <Button
-            android:id="@+id/btnHack2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Hack"
-            android:textStyle="bold"
-            android:layout_marginBottom="25dp"
-            android:backgroundTint="@android:color/holo_purple" />
+            android:backgroundTint="@android:color/holo_green_light" />
 
         <EditText
-            android:id="@+id/txtResponse"
+            android:id="@+id/textShow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_marginBottom="10dp" />
+
+
+        <EditText
+            android:id="@+id/txtFeedback"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="40dp"
@@ -61,11 +61,11 @@
             android:text="Response" />
 
         <Button
-            android:id="@+id/btnNext2"
+            android:id="@+id/btnExit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Next"
+            android:text="Exit"
             android:textStyle="bold"
-            android:backgroundTint="#5C6" />
+            android:backgroundTint="@android:color/holo_red_dark" />
         </LinearLayout>
 </FrameLayout>

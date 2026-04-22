@@ -1,6 +1,7 @@
 package com.example.imad_assignment_two
 
 import android.os.Bundle
+import android.text.Editable
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -17,7 +18,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.rememberNestedScrollInteropConnection
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.imad_assignment_two.ui.theme.IMAD_Assignment_TwoTheme
-
 class MainActivity : ComponentActivity() {
     //Simple arrays
     private val questions = arrayOf(
@@ -86,7 +86,7 @@ class MainActivity : ComponentActivity() {
             if (currentQuestion < questions.size) {
                 showQuestionScreen()
             } else {
-                ShowScoreScreen()
+                showScoreScreen()
             }
         }
     }
@@ -99,7 +99,7 @@ class MainActivity : ComponentActivity() {
             feedbackList.add("g${currentQuestion + 1}: ")
         } else {
             feedbackText.text = "WRONG!"
-            feedbacklist.add("g${currentQuestion + 1}: ")
+            feedbackList.add("g${currentQuestion + 1}: ")
         }
     }
 
@@ -107,10 +107,10 @@ class MainActivity : ComponentActivity() {
         setContentView(R.layout.activity_reviewpage)
         //Declarations for the review marks page
 
-        val scoreText = findViewById<TextView>(R.id.scoreText)
-        val finalFeedback = findViewById<TextView>(R.id.finalFeedback)
-        val reviewButton = findViewById<TextView>(R.id.reviewButton)
-        val exitButton = findViewById<TextView>(R.id.exitButton)
+        val scoreText = findViewById<TextView>(R.id.textShow)
+        val finalFeedback = findViewById<TextView>(R.id.txtFeedback)
+        val reviewButton = findViewById<TextView>(R.id.scoreCheck)
+        val exitButton = findViewById<TextView>(R.id.btnExit)
 
         scoreText.text = "you scored $score out of $[questions.size]"
         finalFeedback.text = if (score >= 2) "Awesome! You know ball!" else "Do better next time!"
