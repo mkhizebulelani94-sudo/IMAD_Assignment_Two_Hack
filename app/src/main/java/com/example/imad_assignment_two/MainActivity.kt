@@ -11,6 +11,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.rememberNestedScrollInteropConnection
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.imad_assignment_two.ui.theme.IMAD_Assignment_TwoTheme
 
@@ -37,22 +38,27 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         showWelcomeScreen()
     }
-
     private fun showWelcomeScreen() {
         setContentView(R.layout.activity_welcome)
         val startButton = findViewById<Button>(R.id.btnShow)
         startButton.setOnClickListener {
             currentQuestion = 0
             score = 0
+            feedbackList.clear()
+            showQuestionScreen()
         }
     }
 }
+    private fun showQuestionScreen(){
+        setContentView(R.layout.activity_question1)
+    //Main declarations for the questions page
 
+        val questionText = findViewById<TextView>(R.id.questionText)
+        val trueButton = findViewById<Button>(R.id.trueButton)
+        val falseButton = findViewById<Button>(R.id.falseButton)
+        val feedbackText = findViewById<TextView>(R.id.feedbackText)
+        val nextButton = findViewById<Button>(R.id.nextButton)
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        showQuestionScreen()
-    }
 
 
 
