@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -40,6 +41,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         showWelcomeScreen()
     }
+
     private fun showWelcomeScreen() {
         setContentView(R.layout.activity_welcome)
         val startButton = findViewById<Button>(R.id.btnShow)
@@ -100,6 +102,30 @@ class MainActivity : ComponentActivity() {
             feedbacklist.add("g${currentQuestion + 1}: ")
         }
     }
+
+    private fun showScoreScreen() {
+        setContentView(R.layout.activity_reviewpage)
+        //Declarations for the review marks page
+
+        val scoreText = findViewById<TextView>(R.id.scoreText)
+        val finalFeedback = findViewById<TextView>(R.id.finalFeedback)
+        val reviewButton = findViewById<TextView>(R.id.reviewButton)
+        val exitButton = findViewById<TextView>(R.id.exitButton)
+
+        scoreText.text = "you scored $score out of $[questions.size]"
+        finalFeedback.text = if (score >= 2) "Awesome! You know ball!" else "Do better next time!"
+
+        reviewButton.setOnClickListener {
+            val facts = questions.mapIndexed { index, q ->
+                "${(index + 1)}, $q\nAnswer: ${answers[index]}"
+            }.joinToString("/n/n")
+            Toast.makeText(this, facts, Toast.LENGTH_LONG).show()
+        }
+        exitButton.setOnClickListener {
+            finish()
+        }
+    }
+}
 
 
 
