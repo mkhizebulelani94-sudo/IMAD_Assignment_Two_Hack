@@ -27,6 +27,7 @@
         android:elevation="10dp">
 
     <TextView
+        android:id="@+id/questionText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Virat Kohli has 83 hundreds in all formats"
@@ -36,7 +37,7 @@
         android:textColor="@color/black" />
 
     <Button
-        android:id="@+id/btnMyth2"
+        android:id="@+id/btnMyth"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Myth"
@@ -45,7 +46,7 @@
         android:backgroundTint="@android:color/holo_purple" />
 
     <Button
-        android:id="@+id/btnHack2"
+        android:id="@+id/btnHack"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Hack"
@@ -54,7 +55,7 @@
         android:backgroundTint="@android:color/holo_purple" />
 
     <EditText
-        android:id="@+id/txtResponse"
+        android:id="@+id/txtRespond"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="40dp"
@@ -63,7 +64,7 @@
         android:text="Response" />
 
     <Button
-        android:id="@+id/btnNext2"
+        android:id="@+id/btnNext1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Next"

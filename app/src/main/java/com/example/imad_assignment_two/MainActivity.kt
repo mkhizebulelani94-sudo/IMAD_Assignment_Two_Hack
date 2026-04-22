@@ -54,9 +54,14 @@ class MainActivity : ComponentActivity() {
     }
 
     private fun showQuestionScreen() {
+        //Declarations of the screens that are going to be used for the app
         setContentView(R.layout.activity_question1)
-        //Main declarations for the questions page
+        setContentView(R.layout.activity_question2)
+        setContentView(R.layout.activity_question3)
+        setContentView(R.layout.activity_question4)
+        setContentView(R.layout.activity_question5)
 
+        //Main declarations for the questions page
         val questionText = findViewById<TextView>(R.id.questionText)
         val trueButton = findViewById<Button>(R.id.btnHack)
         val falseButton = findViewById<Button>(R.id.btnMyth)
@@ -90,7 +95,8 @@ class MainActivity : ComponentActivity() {
             }
         }
     }
-
+    //shows how the app will respond relative to if you got a question right or wrong
+    //it is the processing power of the app and happening while we are using the app
     private fun checkAnswer(userAnswer: Boolean, feedbackText: TextView) {
         val correct = answers[currentQuestion]
         if (userAnswer == correct) {
@@ -106,21 +112,23 @@ class MainActivity : ComponentActivity() {
     private fun showScoreScreen() {
         setContentView(R.layout.activity_reviewpage)
         //Declarations for the review marks page
-
         val scoreText = findViewById<TextView>(R.id.textShow)
         val finalFeedback = findViewById<TextView>(R.id.txtFeedback)
         val reviewButton = findViewById<TextView>(R.id.scoreCheck)
         val exitButton = findViewById<TextView>(R.id.btnExit)
 
+        //Coding showing the score you got and if and else statement for whether you did well or badly
         scoreText.text = "you scored $score out of $[questions.size]"
         finalFeedback.text = if (score >= 2) "Awesome! You know ball!" else "Do better next time!"
 
+        //review your marks through this button shows compiled data
         reviewButton.setOnClickListener {
             val facts = questions.mapIndexed { index, q ->
                 "${(index + 1)}, $q\nAnswer: ${answers[index]}"
             }.joinToString("/n/n")
             Toast.makeText(this, facts, Toast.LENGTH_LONG).show()
         }
+        //exit button to end the operator and go to the start of the app
         exitButton.setOnClickListener {
             finish()
         }
