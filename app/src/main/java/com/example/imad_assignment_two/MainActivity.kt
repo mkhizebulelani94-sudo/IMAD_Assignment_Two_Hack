@@ -65,11 +65,11 @@ class MainActivity : ComponentActivity() {
         val questionText = findViewById<TextView>(R.id.questionText)
         val trueButton = findViewById<Button>(R.id.btnHack)
         val falseButton = findViewById<Button>(R.id.btnMyth)
-        val feedbackText = findViewById<EditText>(R.id.txtRespond)
+        val feedbackText = findViewById<TextView>(R.id.txtRespond)
         val nextButton = findViewById<Button>(R.id.btnNext1)
 
         questionText.text = questions[currentQuestion]
-        feedbackText.text = ""
+        feedbackText.text = " "
         var answered = false
 
         trueButton.setOnClickListener {

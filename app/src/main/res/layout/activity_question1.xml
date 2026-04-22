@@ -55,7 +55,7 @@
         android:textColor="@color/black"
         android:backgroundTint="@android:color/holo_purple" />
 
-    <EditText
+    <TextView
         android:id="@+id/txtRespond"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
