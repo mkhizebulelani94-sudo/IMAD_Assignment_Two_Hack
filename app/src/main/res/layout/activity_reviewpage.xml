@@ -39,7 +39,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
-            android:text="Check Score"
+            android:text="Check Answers"
             android:textStyle="bold"
             android:backgroundTint="@android:color/holo_green_light" />
 
