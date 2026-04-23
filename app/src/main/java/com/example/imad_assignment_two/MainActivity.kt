@@ -130,7 +130,7 @@ class MainActivity : ComponentActivity() {
             }.joinToString("\n\n")
             Toast.makeText(this, facts, Toast.LENGTH_LONG).show()
         }
-        //exit button to end the operator and go to the start of the app
+        //exit button to end the operator and go to out of the app
         exitButton.setOnClickListener {
             finish()
         }
