@@ -9,9 +9,9 @@ This app is a quiz based application with multiple screens and a review page at 
 
 //Video explaination:
 
-Youtube Channel Link:
+Youtube Channel Link: http://www.youtube.com/@BuleMk-sd9gk
 
-Youtube Video Link:
+Youtube Video Link: https://youtu.be/lv9c55sy6PU?si=E1E0HsGL9hWWmMBk
 
 //Github actions:
 
